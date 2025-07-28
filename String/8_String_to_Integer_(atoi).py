@@ -22,10 +22,3 @@ class Solution:
             return -2**31
         else:
             return sign * num
-
-
-
-
-solution = Solution()
-s = " "
-print(solution.myAtoi(s))
