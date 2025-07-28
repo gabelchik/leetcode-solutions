@@ -1,4 +1,3 @@
-# from collections import Counter
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         all_chars = "abcdefghijklmnopqrstuvwxyz"
@@ -12,29 +11,25 @@ class Solution:
         return m if m != float('+inf') else -1
 
 
-# class Solution:
-#     def firstUniqChar(self, s: str) -> int:
-#         count = Counter(s)
-#
-#         for i, char in enumerate(s):
-#             if count[char] == 1:
-#                 return i
-#         return -1
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        count = Counter(s)
+
+        for i, char in enumerate(s):
+            if count[char] == 1:
+                return i
+        return -1
 
 
-# from collections import Counter
-#
-#
-# class Solution:
-#     def firstUniqChar(self, s: str) -> int:
-#         c = Counter(s)
-#
-#         for i in c:
-#             if c[i] == 1:
-#                 return s.index(i)
-#
-#         return -1
+from collections import Counter
 
-solution = Solution()
-s = "loveleetcode"
-print(solution.firstUniqChar(s))
+
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        c = Counter(s)
+
+        for i in c:
+            if c[i] == 1:
+                return s.index(i)
+
+        return -1
