@@ -1,12 +1,4 @@
 from collections import deque
-from typing import Optional, List
-
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
 
 
 class Solution:
@@ -27,9 +19,3 @@ class Solution:
                     qq.append(node.right)
             result.append(a)
         return result
-
-
-solution = Solution()
-node = TreeNode(1, TreeNode(2, TreeNode(3), TreeNode(4)), TreeNode(2, TreeNode(4), TreeNode(3)))
-print(solution.levelOrder(node))
-
