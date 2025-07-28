@@ -1,41 +1,25 @@
-from typing import Optional
+class Solution:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        last = head
+        k = 1
+        while last.next:
+            k+=1
+            last = last.next
+        k = k - n
+
+        if k == 0:
+            return head.next
+
+        tmp1 = head
+        t = 1
+        while t != k:
+            t+=1
+            tmp1 = tmp1.next
+        tmp1.next = tmp1.next.next
+        return head
 
 
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
 
-
-def print_Node(head):
-    list = []
-    current_element = head
-    while current_element:
-        list.append(current_element.val)
-        current_element = current_element.next
-    print(*list)
-    return
-
-
-# class Solution:
-#     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-#         last = head
-#         k = 1
-#         while last.next:
-#             k+=1
-#             last = last.next
-#         k = k - n
-#
-#         if k == 0:
-#             return head.next
-#
-#         tmp1 = head
-#         t = 1
-#         while t != k:
-#             t+=1
-#             tmp1 = tmp1.next
-#         tmp1.next = tmp1.next.next
-#         return head
 
 # Через один проход:
 class Solution:
