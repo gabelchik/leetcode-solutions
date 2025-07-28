@@ -9,8 +9,3 @@ class Solution:
             return int(x)
         else:
             return 0
-
-
-solution = Solution()
-s = -123
-print(solution.reverse(s))
