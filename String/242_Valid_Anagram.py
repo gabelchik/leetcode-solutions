@@ -15,6 +15,9 @@ class Solution:
             return True
         return False
 
+
+
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         map = {}
@@ -33,15 +36,3 @@ class Solution:
                 continue
             return False
         return True
-
-
-
-solution = Solution()
-s = "keek"
-t = "eekk"
-print(solution.isAnagram(s, t))
-
-solution = Solution()
-s = "anagram"
-t = "nagaram"
-print(solution.isAnagram(s, t))
